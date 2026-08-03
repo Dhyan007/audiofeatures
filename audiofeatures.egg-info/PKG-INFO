@@ -1,0 +1,142 @@
+Metadata-Version: 2.4
+Name: audiofeatures
+Version: 2.3.0
+Summary: A Python library for audio preprocessing, feature extraction, and audio representations.
+Author: Dhyan Sudheer
+License: MIT
+Project-URL: Homepage, https://github.com/YOUR_USERNAME/audiofeatures
+Project-URL: Repository, https://github.com/YOUR_USERNAME/audiofeatures
+Project-URL: Issues, https://github.com/YOUR_USERNAME/audiofeatures/issues
+Keywords: audio,audio processing,feature extraction,machine learning,deep learning,music,signal processing,librosa
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Multimedia :: Sound/Audio
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: numpy>=1.23
+Requires-Dist: pandas>=2.0
+Requires-Dist: librosa>=0.10.0
+Requires-Dist: soundfile>=0.12.1
+Dynamic: license-file
+
+# audiofeatures
+
+A Python library for audio preprocessing and handcrafted feature extraction for machine learning, deep learning, and music information retrieval (MIR).
+
+`audiofeatures` extracts temporal, spectral, cepstral, tonal, pitch, and rhythm features from audio files and returns a Pandas DataFrame.
+
+---
+
+## Features
+
+### Audio Preprocessing
+- Mono conversion
+- Resampling
+- Normalization
+- Silence removal
+- Audio cropping
+
+### Temporal Features
+- RMS Energy
+- Zero Crossing Rate
+- Energy
+- Peak Amplitude
+- Crest Factor
+- Dynamic Range
+- Energy Variability
+- Amplitude Variability
+
+### Spectral Features
+- Spectral Centroid
+- Spectral Bandwidth
+- Spectral Rolloff
+- Spectral Contrast
+
+### Cepstral Features
+- MFCC
+- Delta MFCC
+- Delta-Delta MFCC
+
+### Tonal Features
+- Chroma
+- Tonnetz
+
+### Pitch Features
+- Pitch Mean
+- Pitch Standard Deviation
+- Pitch Minimum
+- Pitch Maximum
+
+### Rhythm Features
+- Onset Strength Mean
+- Onset Strength Standard Deviation
+- Onset Strength Maximum
+
+---
+
+## Installation
+
+```bash
+pip install audiofeatures
+```
+
+---
+
+## Quick Start
+
+```python
+from audiofeatures import extract_features
+
+df = extract_features("song.wav")
+
+print(df.head())
+```
+
+---
+
+## Default Parameters
+
+| Parameter | Default |
+|-----------|---------|
+| Sample Rate | 22050 Hz |
+| Window Size | 0.5 seconds |
+
+---
+
+## Returned Features
+
+- 185 handcrafted audio features
+- Window-based extraction
+- Pandas DataFrame output
+
+---
+
+## Requirements
+
+- Python 3.9+
+- NumPy
+- Pandas
+- Librosa
+- SoundFile
+
+---
+
+## License
+
+MIT License
+
+---
+
+## Author
+
+Dhyan Sudheer

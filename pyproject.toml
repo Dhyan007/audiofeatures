@@ -1,0 +1,62 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "audiofeatures"
+version = "2.4.0"
+description = "A Python library for audio preprocessing, feature extraction, and audio representations."
+readme = "README.md"
+requires-python = ">=3.9"
+
+authors = [
+    { name = "Dhyan Sudheer" }
+]
+
+license = { text = "MIT" }
+
+keywords = [
+    "audio",
+    "audio processing",
+    "feature extraction",
+    "machine learning",
+    "deep learning",
+    "music",
+    "signal processing",
+    "librosa"
+]
+
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Multimedia :: Sound/Audio",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence"
+]
+
+dependencies = [
+    "numpy>=1.23",
+    "pandas>=2.0",
+    "librosa>=0.10.0",
+    "soundfile>=0.12.1"
+]
+
+[project.urls]
+Homepage = "https://github.com/YOUR_USERNAME/audiofeatures"
+Repository = "https://github.com/YOUR_USERNAME/audiofeatures"
+Issues = "https://github.com/YOUR_USERNAME/audiofeatures/issues"
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["audiofeatures*"]
+exclude = ["tests*"]

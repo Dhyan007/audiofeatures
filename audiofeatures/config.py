@@ -1,0 +1,20 @@
+DEFAULT_SAMPLE_RATE = 22050
+
+DEFAULT_WINDOW_SIZE = 0.5
+
+DEFAULT_N_MFCC = 20
+
+DEFAULT_FMIN = "C2"
+DEFAULT_FMAX = "C7"
+
+DEFAULT_FRAME_LENGTH = 2048
+DEFAULT_HOP_LENGTH = 512
+
+SUPPORTED_AUDIO_FORMATS = {
+    ".wav",
+    ".mp3",
+    ".flac",
+    ".ogg",
+    ".m4a"
+}
+n_fft = min(DEFAULT_FRAME_LENGTH, len(window))
